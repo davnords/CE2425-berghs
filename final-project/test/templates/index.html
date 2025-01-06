@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../static/scripts.js"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navbar -->
+    <nav class="bg-blue-600 text-white shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="#" class="text-2xl font-bold">NEW DEPLOYMENT</a>
+
+                <!-- Hamburger Menu (Mobile) -->
+                <button id="menu-button" class="md:hidden focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+
+                <!-- Navbar Links -->
+                <div id="menu" class="hidden md:flex space-x-4">
+                    <a href="#" class="hover:text-gray-200">Home</a>
+                    <a href="#carousel" class="hover:text-gray-200">Carousel</a>
+                    <a href="#interactive-button" class="hover:text-gray-200">Button</a>
+                    <a href="#footer" class="hover:text-gray-200">Contact</a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden flex-col space-y-2 md:hidden">
+                <a href="#" class="block text-center hover:bg-blue-500 py-2">Home</a>
+                <a href="#carousel" class="block text-center hover:bg-blue-500 py-2">Carousel</a>
+                <a href="#interactive-button" class="block text-center hover:bg-blue-500 py-2">Button</a>
+                <a href="#footer" class="block text-center hover:bg-blue-500 py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto mt-8 px-4">
+        <section id="carousel" class="mb-8">
+            <h2 class="text-2xl font-semibold text-center mb-4">Professional Image Carousel</h2>
+            <div class="relative w-full max-w-4xl mx-auto">
+                <div class="carousel overflow-hidden rounded-lg shadow-lg">
+                    <div class="carousel-inner flex transition-transform duration-500 ease-in-out">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Jeff_Bezos_visits_LAAFB_SMC_%283908618%29_%28cropped%29.jpeg"
+                            alt="Image 1" class="w-full">
+                        <img src="https://via.placeholder.com/800x400?text=Image+2" alt="Image 2" class="w-full">
+                        <img src="https://via.placeholder.com/800x400?text=Image+3" alt="Image 3" class="w-full">
+                    </div>
+                </div>
+                <button class="bg-red-500 text-white" onclick="createUser()">Create User!!!</button>
+                <button id="prev"
+                    class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white rounded-full p-2 hover:bg-blue-700">
+                    &#8592;
+                </button>
+                <button id="next"
+                    class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white rounded-full p-2 hover:bg-blue-700">
+                    &#8594;
+                </button>
+            </div>
+        </section>
+
+        <section id="interactive-button" class="text-center">
+            <h2 class="text-xl font-semibold mb-4">Interactive Button</h2>
+            <button onclick="buttonClick()"
+                class="px-6 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700">
+                Click Me!
+            </button>
+        </section>
+    </main>
+
+    <footer id="footer" class="bg-gray-800 text-white py-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 My App. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar functionality
+        const menuButton = document.getElementById('menu-button');
+        const menu = document.getElementById('menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+
+        // Carousel functionality
+        const carouselInner = document.querySelector('.carousel-inner');
+        const images = carouselInner.children;
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+        let currentIndex = 0;
+
+        function updateCarousel() {
+            const width = images[0].clientWidth;
+            carouselInner.style.transform = `translateX(-${currentIndex * width}px)`;
+        }
+
+        prev.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateCarousel();
+        });
+
+        next.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateCarousel();
+        });
+
+        window.addEventListener('resize', updateCarousel);
+    </script>
+</body>
+
+</html>
