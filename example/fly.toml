@@ -1,0 +1,22 @@
+# fly.toml app configuration file generated for first-online-webpage-floral-brook-8344 on 2025-01-15T20:55:13+01:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'first-online-webpage-floral-brook-8344'
+primary_region = 'cdg'
+
+[build]
+
+[http_service]
+  internal_port = 5000
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
