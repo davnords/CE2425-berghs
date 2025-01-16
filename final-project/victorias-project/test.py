@@ -2,7 +2,7 @@ import psycopg2
 from psycopg2 import sql
 
 # Database connection parameters
-db_url = "postgresql://neondb_owner:3g5FJbUcReZO@ep-noisy-sky-a2xtf0fp.eu-central-1.aws.neon.tech/neondb?sslmode=require"
+db_url = "postgresql://neondb_owner:3wjHAcXItrm4@ep-polished-glade-a239xmyu.eu-central-1.aws.neon.tech/neondb?sslmode=require"
 
 try:
     # Establish the connection
@@ -15,7 +15,7 @@ try:
         INSERT INTO "User" (name, email, created_at)
         VALUES (%s, %s, NOW())
     """
-    data = ("David Nordström", 'david.nordstromm@gmail.com')  # Replace with actual data
+    data = ("vicwest123", 'victoria.shiva.westoo@gmail.com')  # Replace with actual data
 
     # Execute the query
     cursor.execute(insert_query, data)

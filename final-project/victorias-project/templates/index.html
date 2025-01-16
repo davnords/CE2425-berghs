@@ -4,16 +4,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My App</title>
+    <title>Weather App</title>
     <script src="../static/scripts.js"></script>
-    <link rel="stylesheet" href="../static/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
-    <main >
-        <h1>Clean website</h1>
-        <button onclick="buttonClick()">Generate image</button>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Top Bar -->
+    <header class="bg-blue-600 text-white py-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-xl font-bold">Weather App</h1>
+            <button 
+                onclick="buttonClick()" 
+                class="bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-yellow-300">
+                Click me (please)!
+            </button>
+            <button onclick="createUser()">Create User</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto mt-6 px-4">
+        <!-- Current Weather Section -->
+        <section class="bg-white shadow-md rounded-lg p-6 mb-6">
+            <h2 class="text-2xl font-bold mb-4">Current Weather</h2>
+            <div class="grid grid-cols-2 gap-4 items-center">
+                <!-- Left Column -->
+                <div>
+                    <p class="text-lg">Stockholm, SE</p>
+                    <p class="text-4xl font-bold">5°C</p>
+                    <p class="text-sm text-gray-600">Mostly cloudy</p>
+                    <p class="text-sm text-gray-600">RealFeel®: -2°C</p>
+                    <a href="#" class="text-blue-500 text-sm font-semibold hover:underline">More details &rsaquo;</a>
+                </div>
+                <!-- Right Column -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="text-sm">
+                        <p class="font-semibold">RealFeel Shade™</p>
+                        <p>-2°</p>
+                    </div>
+                    <div class="text-sm">
+                        <p class="font-semibold">Wind</p>
+                        <p>W 23 km/h</p>
+                    </div>
+                    <div class="text-sm">
+                        <p class="font-semibold">Wind Gusts</p>
+                        <p>44 km/h</p>
+                    </div>
+                    <div class="text-sm">
+                        <p class="font-semibold">Air Quality</p>
+                        <p class="text-green-600 font-semibold">Excellent</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Forecast Section -->
+        <section class="bg-white shadow-md rounded-lg p-6 mb-6">
+            <h2 class="text-2xl font-bold mb-4">5-Day Forecast</h2>
+            <div class="grid grid-cols-5 gap-4">
+                <div class="text-center">
+                    <p class="font-bold">Mon</p>
+                    <div class="text-4xl">☀️</div>
+                    <p>0° / 2°</p>
+                </div>
+                <div class="text-center">
+                    <p class="font-bold">Tue</p>
+                    <div class="text-4xl">🌦️</div>
+                    <p>2° / 3°</p>
+                </div>
+                <div class="text-center">
+                    <p class="font-bold">Wed</p>
+                    <div class="text-4xl">☁️</div>
+                    <p>1° / -1°</p>
+                </div>
+                <div class="text-center">
+                    <p class="font-bold">Thu</p>
+                    <div class="text-4xl">🌧️</div>
+                    <p>0° / 2°</p>
+                </div>
+                <div class="text-center">
+                    <p class="font-bold">Fri</p>
+                    <div class="text-4xl">❄️</div>
+                    <p>-4° / -1°</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weather Radar Section -->
+        <section class="bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-2xl font-bold mb-4">Stockholm Weather Radar & Maps</h2>
+            <!-- Embed an interactive map -->
+            <iframe 
+                src="https://embed.windy.com/embed2.html?lat=59.3293&lon=18.0686&zoom=5&level=surface&overlay=radar&menu=&message=true&marker=true&calendar=&pressure=true&type=map&location=coordinates&detail=true&detailLat=59.3293&detailLon=18.0686&metricWind=default&metricTemp=default&radarRange=-1" 
+                width="100%" 
+                height="450" 
+                frameborder="0" 
+                allowfullscreen>
+            </iframe>
+            <div class="flex justify-center mt-4 space-x-4">
+                <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded">Clouds</button>
+                <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded">Temperature</button>
+            </div>
+        </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white py-4 mt-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Weather App. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 
 </html>
