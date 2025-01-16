@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DEAR DIARY</title>
+    <link rel="stylesheet" href="../static/johnnys.css">
+</head>
+<body>
+    <h1>"if only I could understand the reason for my crying, if only I could stop this fear, of dreaming that I'm dying."</h1>
+    
+    <div class="text-block">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        <div class="emoticon">(^_^)</div>
+    </div>
+
+    <div class="text-block">
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+        <div class="emoticon">(-_-)</div>
+    </div>
+
+    <div class="text-block">
+        Duis aute irure dolor in reprehenderit in voluptate velit.
+        <div class="emoticon">(>_<)</div>
+    </div>
+
+    <div class="chat-container">
+        <h2>Twin Peaks Haiku Generator</h2>
+        <div id="haiku-response">Loading haiku...</div>
+        <div class="emoticon">(o_O)</div>
+    </div>
+
+    <script>
+    // Make emoticons interactive
+    document.querySelectorAll('.emoticon').forEach(emoticon => {
+        emoticon.addEventListener('click', function() {
+            const emotions = {
+                '(^_^)': '(>_<)',
+                '(>_<)': '(-_-)',
+                '(-_-)': '(^_^)',
+                '(o_O)': '(O_o)',
+                '(O_o)': '(o_O)'
+            };
+            this.textContent = emotions[this.textContent] || '(^_^)';
+        });
+    });
+
+    // Fetch haiku from API
+    fetch('/api/chat')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('haiku-response').textContent = data.message;
+        });
+    </script>
+</body>
+</html>
