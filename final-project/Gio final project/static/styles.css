@@ -1,0 +1,75 @@
+/* Load the Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* Body styles */
+body {
+    background-color: #3b2c39;
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+
+/* Title styles */
+h1 {
+    font-size: 130px;
+    color: hsl(64, 52%, 48%);
+    text-align: center;
+    font-family: 'Spicy Rice', serif; /* Use the font-family from Google */
+    margin-bottom: 20px; /* Reduced space below the title */
+}
+
+/* Button styles */
+button {
+    font-size: 20px; /* Make the button text larger */
+    background-color: #f3d9ed; /* Light pink background */
+    color: #3b2c39; /* Dark text color */
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    padding: 20px 50px; /* Add padding for a bigger button */
+    border: none; /* Remove default border */
+    border-radius: 12px; /* Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a soft shadow for depth */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth animation for hover and click effects */
+    margin-top: 0; /* Ensure no extra space above the button */
+}
+
+/* Button hover effect */
+button:hover {
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Make the shadow larger on hover */
+}
+
+/* Button active effect (when clicked) */
+button:active {
+    transform: scale(0.95); /* Slightly shrink the button when clicked */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Reduce shadow when clicked */
+}
+
+/* Image container styles */
+.image-container {
+    margin-top: 5px; /* Add some space above the image */
+    text-align: center; /* Center the image horizontally */
+}
+
+.image-container img {
+    max-width: 300px; /* Limit the image width */
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 0; /* Add optional rounded corners */
+    box-shadow: none; /* Add a soft shadow for depth */
+}
+
+#fortuneText {
+    font-family: 'Poppins', sans-serif; /* Set the desired font */
+    font-size: 20px; /* Adjust text size */
+    color: #f3d9ed; /* Set the text color (light pink in this case) */
+    text-align: center; /* Center-align the text */
+    margin: 20px auto; /* Add spacing and center placement */
+    max-width: 80%; /* Limit the width of the text */
+    background-color: #3b2c39; /* Optional: Add a background color */
+    padding: 0px; /* Add padding around the text */
+    border-radius: 0px; /* Round the edges */
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+    display: block; /* Ensure the div displays as a block */
+}
