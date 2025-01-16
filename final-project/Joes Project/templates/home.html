@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Chatbot</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <script src="../static/scripts.js" defer></script>
+</head>
+
+<body>
+    <!-- Navigation Menu -->
+    <nav class="menu">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/question">?</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>THE ROBOT THAT RUINS YOUR DAY</h1>
+
+        <!-- Chatbot Section -->
+        <div id="chatbot-container">
+            <h2>Talk to the Chatbot</h2>
+            <div id="chatbot-messages" style="border: 1px solid #e3129a; padding: 10px; height: 300px; overflow-y: auto; background-color: #efe9ee; color:#e3129a; max-width: 50%; margin: 20px auto;">
+                <!-- Chat messages will appear here -->
+            </div>
+            <div style="display: flex; margin-top: 10px;">
+                <input id="user-input" type="text" placeholder="Type your message here..." style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                <button id="send-button" style="padding: 10px 20px; margin-left: 10px; background-color: #007bff; color: rgb(12, 239, 72); border: none; border-radius: 4px; cursor: pointer;">
+                    Send
+                </button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
