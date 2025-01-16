@@ -1,0 +1,21 @@
+body {
+    background-image: url('https://cdn.wallpaperdirect.com/asset/img/product/93667/full/ralph-lauren-vintage-dauphine-blue-white-wallpaper-0@lg.webp');
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 250px;
+    color: steelblue;
+    text-align: center;
+    font-family: 'Monsieur La Doulaise', cursive;
+    font-weight: normal;
+}
+
+button {
+    position: absolute;
+    top: 70%; /* Adjust to move the button vertically */
+    left: 50%; /* Centers the button horizontally */
+    transform: translate(-50%, -50%);
+}
