@@ -2,7 +2,7 @@ import psycopg2
 from psycopg2 import sql
 
 # Database connection parameters
-db_url = "postgresql://neondb_owner:3g5FJbUcReZO@ep-noisy-sky-a2xtf0fp.eu-central-1.aws.neon.tech/neondb?sslmode=require"
+db_url = "postgresql://neondb_owner:3wjHAcXItrm4@ep-polished-glade-a239xmyu.eu-central-1.aws.neon.tech/neondb?sslmode=require"
 
 
 def create_user(name, email): 

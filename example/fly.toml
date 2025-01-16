@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for first-online-webpage on 2024-12-11T23:02:28+01:00
+# fly.toml app configuration file generated for first-online-webpage-floral-brook-8344 on 2025-01-15T20:55:13+01:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'first-online-webpage'
+app = 'first-online-webpage-floral-brook-8344'
 primary_region = 'cdg'
 
 [build]
