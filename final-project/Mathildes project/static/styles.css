@@ -1,0 +1,91 @@
+/* Body styles */
+body {
+    background-color: #FCA4E0;
+    color: white;
+    align-items: center;
+    text-align: center;
+    font-family: 'Danfo', serif;
+    margin-top: 200px;
+}
+
+
+
+/* Wave effect for h1 text */
+h1 {
+    font-size: 100px;
+    color: #F20815; /* Bright red */
+    text-align: center;
+    font-family: 'Danfo', serif;
+    animation: waveEffect 3s ease-in-out forwards; /* Apply animation to h1 */
+
+}
+
+/* Define the wave animation */
+@keyframes waveEffect {
+    0% {
+        transform: translateY(100px) rotate(0deg); /* Start below the page */
+        opacity: 0; /* Invisible */
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg); /* Move up and tilt slightly */
+        opacity: 0.7; /* Semi-visible */
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg); /* End at the normal position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Button styles */
+button {
+    font-size: 20px; /* Make the button text larger */
+    background-color: #F20815; /* Light pink background */
+    color: #FCA4E0; /* Dark text color */
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    padding: 20px 50px; /* Add padding for a bigger button */
+    border: none; /* Remove default border */
+    border-radius: 12px; /* Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a soft shadow for depth */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth animation for hover and click effects */
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 1s ease-in forwards; /* Fade-in animation */
+    animation-delay: 3s; /* Wait for h1 animation to finish */
+    margin-top: 20px;
+}
+
+/* Button hover effect */
+button:hover {
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Make the shadow larger on hover */
+}
+
+/* Button active effect (when clicked) */
+button:active {
+    transform: scale(0.95); /* Slightly shrink the button when clicked */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Reduce shadow when clicked */
+}
+
+/* Define the fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Invisible */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+    }
+}
+
+#answerText {
+    font-family: 'Poppins', sans-serif; /* Set the desired font */
+    font-size: 24px; /* Adjust text size */
+    color: #f3d9ed; /* Set the text color (light pink in this case) */
+    text-align: center; /* Center-align the text */
+    margin: 20px auto; /* Add spacing and center placement */
+    max-width: 80%; /* Limit the width of the text */
+    background-color: #FCA4E0; /* Optional: Add a background color */
+    padding: 0px; /* Add padding around the text */
+    border-radius: 0px; /* Round the edges */
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+    display: block; /* Ensure the div displays as a block */
+}
