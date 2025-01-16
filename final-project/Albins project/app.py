@@ -14,7 +14,15 @@ def home():
 
 @app.route('/api/image')
 def image():
-    return jsonify({'response': 'Welcome to the world of Albin'})
+    response = client.images.generate(
+        model="dall-e-3",
+        prompt="Generate carzy looking patterns in black and white.", 
+        size="1024x1024",
+        quality="standard",
+        n=1,
+    )
+    image_url = (response.data[0].url)
+    return jsonify({'image_url': image_url})
 
 
 
@@ -38,3 +46,6 @@ def chat():
         ]
     )
     return jsonify({'message': completion.choices[0].message.content})
+
+
+
