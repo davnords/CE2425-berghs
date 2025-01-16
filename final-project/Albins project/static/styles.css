@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+button {
+    color: #fff704;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(211, 24, 24);
+    color: white;
+    border-radius: 5px;
+    font-family: 'Didot', cursive;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+.image-container {
+    margin-top: 20px;
+    width: auto;  /* Sätt bredden till 'auto' så den anpassar sig till bildens storlek */
+    max-width: 1024px;  /* Begränsa maximal bredd */
+    height: auto;  /* Sätt höjden till 'auto' så den justeras efter bildens höjd */
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+#generatedImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    background-image: url('https://cdn.midjourney.com/d32a4dc3-3715-4bbc-978b-b656364bfcbf/0_0.png');
+    background-size: cover;
+    text-align: center;
+    padding: 20px;
+}
+h1 {
+    font-family: 'Optima', cursive;
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);  
+}
