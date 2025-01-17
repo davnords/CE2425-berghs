@@ -1,0 +1,83 @@
+body {
+    background-image: url(https://i.etsystatic.com/8405162/r/il/6f8d0b/3079199962/il_1588xN.3079199962_33i9.jpg);
+    color: azure;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+}
+
+h1, .text-block, .chat-container {
+    border: 1px dashed rgba(255, 255, 255, 0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 80%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.gif-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.gif-text {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.audio-container {
+    margin: 20px auto;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px dashed rgba(255, 255, 255, 0.7);
+}
+
+audio {
+    filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
+    width: 100%;
+    max-width: 500px;
+}
+
+.twin-peaks-button {
+    background-color: #cc0000;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-family: 'Courier New', monospace;
+    font-size: 1.2em;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.twin-peaks-button:hover {
+    background-color: #aa0000;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.twin-peaks-button:active {
+    transform: scale(0.95);
+}
+
+.chat-container {
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+}
+
+#haiku-response {
+    margin-top: 20px;
+    font-family: 'Courier New', monospace;
+    color: white;
+    line-height: 1.6;
+    white-space: pre-line;
+}
