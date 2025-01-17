@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DEAR DIARY</title>
+    <link rel="stylesheet" href="../static/johnnys.css">
+</head>
+<body>
+    <h1>"if only I could understand the reason for my crying, if only I could stop this fear, of dreaming that I'm dying."</h1>
+    
+    <div class="text-block">
+        <div class="gif-text">
+            We're like everyone else, I guess. We promise that something is forever, when it is really only as long as it takes for us to tire of it.
+            When she walked away, and out of the door, it was like she was leaving forever.
+        </div>
+        <div class="gif-container">
+            <iframe src="https://giphy.com/embed/YMTs7zuXjRFxS" width="100%" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        </div>
+    </div>
+
+    <div class="text-block">
+        <div class="gif-text">
+            I wanted to be a tree so that I could listen for trouble in the woods.
+        </div>
+        <div class="gif-container">
+            <iframe src="https://giphy.com/embed/uITbudIZ08QaA" width="100%" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        </div>
+    </div>
+
+    <div class="text-block">
+        <div class="gif-text">
+            I have simply forgotten how to be loved.
+        </div>
+        <div class="gif-container">
+            <iframe src="https://giphy.com/embed/3o7budo0Ow9NhZRmso" width="100%" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        </div>
+    </div>
+
+    <div class="chat-container">
+        <h2>where is the black lodge?</h2>
+        <button id="askTheArm" class="twin-peaks-button">ASK THE ARM</button>
+        <div id="haiku-response">Click the button to receive a message...</div>
+    </div>
+
+    <!-- Keep your existing SoundCloud section -->
+    <div class="text-block">
+        <div class="audio-container">
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/336829911&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                <a href="https://soundcloud.com/ahmad_mohammad" title="Ahmad Mohammad" target="_blank" style="color: #cccccc; text-decoration: none;">Ahmad Mohammad</a> · 
+                <a href="https://soundcloud.com/ahmad_mohammad/twin-peaks-soundtrack-full-album" title="Twin Peaks Soundtrack [FULL ALBUM]" target="_blank" style="color: #cccccc; text-decoration: none;">Twin Peaks Soundtrack [FULL ALBUM]</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('askTheArm').addEventListener('click', async () => {
+            const responseDiv = document.getElementById('haiku-response');
+            responseDiv.textContent = 'Consulting the arm...';
+            
+            try {
+                const response = await fetch('/api/chat');
+                const data = await response.json();
+                responseDiv.textContent = data.message;
+            } catch (error) {
+                responseDiv.textContent = 'The arm is not responding...';
+            }
+        });
+        </script>
+</body>
+</html>

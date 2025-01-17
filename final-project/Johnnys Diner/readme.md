@@ -1,0 +1,8 @@
+     - What your project does.
+        - My project hosts a slew of quotes from the surrealist show, Twin Peaks by David Lynch. It is a bit of an ommage to that show. It features a slew of gifs, an AI generated Haiku and an embeded player via Soundcloud
+     - How to run it.
+        - Unfortunately, I began to encounter errors with the API key at a certain point and fly.io stopped functioning. However, the code is still running on my local computer. 
+     - Where you have hosted the project (if you have a live url, please include that).
+        - It was previously running here: https://first-online-webpage-cool-moon-2247.fly.dev/
+     - Any dependencies or special instructions.
+        -  It relys on Soundcloud's server to access music in real time. 
